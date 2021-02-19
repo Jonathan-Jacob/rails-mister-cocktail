@@ -12,6 +12,14 @@
   </head>
 
   <body>
-    <%= yield %>
+  <nav class="navbar navbar-expand-sm bg-dark">
+    <div class="container">
+      <%= link_to 'all cocktails', cocktails_path, class: 'text-white' %>
+      <%= link_to 'add cocktail', new_cocktail_path, class: 'text-white'  %>
+    </div>
+  </nav>
+    <div class='container'>
+      <%= yield %>    
+    </div>
   </body>
 </html>
