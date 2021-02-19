@@ -1,8 +1,4 @@
 class CocktailsController < ApplicationController
-  def redirect_root
-    redirect_to cocktails_path
-  end
-
   def index
     @cocktails = Cocktail.all
   end
