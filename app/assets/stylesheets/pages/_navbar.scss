@@ -1,4 +1,5 @@
 .navbar-jj {
+  display: flex;
   justify-content: space-between;
   border-bottom: solid white 1px;
   .navbar-collapse {
@@ -6,5 +7,12 @@
   }
   h1 {
     @include font-size(calc(16px + 2vw));
+  }
+  @media(max-width: 560px) {
+    .nav-center {
+      flex: 0 0 100%;
+      text-align: center;
+      order: 2;
+    }
   }
 }

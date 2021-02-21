@@ -14,9 +14,9 @@
   <body>
   <nav class="navbar navbar-jj sticky-top">
     <div class="container-xl d-flex align-items-center">
-      <%= link_to 'all cocktails', cocktails_path, class: 'text-white' %>
-      <h1 class="text-white m-0">Mr. Cocktail's <i class="fas fa-space-shuttle"></i> Space Bar</h1>
-      <%= link_to 'add cocktail', new_cocktail_path, class: 'text-white' %>
+      <div style='display: flex; text-wrap: no-wrap'><%= link_to 'all cocktails', cocktails_path, class: 'text-white' %></div>
+      <div class="nav-center"><h1 class="text-white m-0">Mr. Cocktail's <i class="fas fa-space-shuttle"></i> Space Bar</h1></div>
+      <div style='display: flex; text-wrap: no-wrap'><%= link_to 'add cocktail', new_cocktail_path, class: 'text-white' %></div>
     </div>
   </nav>
   <div class="d-flex justify-content-center">
