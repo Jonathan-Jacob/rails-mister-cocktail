@@ -1,5 +1,11 @@
-<h1>Add a Cocktail</h1>
-<%= simple_form_for @cocktail do |f| %>
-  <%= f.input :name %>
-  <%= f.submit 'add cocktail', class: "btn btn-primary" %>
-<% end %>
+<div class="container-cocktail">
+  <h1>Add a Cocktail</h1>
+  <%= simple_form_for @cocktail, html: {multipart: true} do |f| %>
+    <%= f.input :name, label: "Name" %>
+    <label class="btn btn-primary my-0 ml-0 mr-2">Upload image<input type="file" style="display: none;" name="cocktail[photo]" id="cocktail_photo"></label>
+    <%= f.submit 'Add cocktail', class: "btn btn-primary" %>
+  <% end %>
+  <% if @cocktail.errors.messages[:photo].any? %>
+    <p class="mt-1 text-danger" style="font-size: small"><%= @cocktail.errors.messages[:photo].first %></p>
+  <% end %>
+</div>

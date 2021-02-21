@@ -1,6 +1,17 @@
-<h1>Cocktails</h1>
-<ul>
-<% @cocktails.each do |cocktail| %>
-  <li><%= link_to cocktail.name, cocktail_path(cocktail) %></li>
-<% end %>
-</ul>
+<div class="container-cocktails">
+  <h1 class="text-center">Cocktails</h1>
+  <div class="row">
+    <% @cocktails.each do |cocktail| %>
+      <div class="col-6 col-sm-4 col-md-3">
+        <%= link_to cocktail_path(cocktail) do %>
+        <div class="card-cocktail d-flex">
+          <%= cl_image_tag cocktail.photo.key, aspect_ratio: 1.77777777778, crop: :fill %>
+          <div class="card-img-overlay d-flex text-white align-items-end">
+            <h4 class="ml-auto" style="text-shadow: black 0px 0px 8px"><%= cocktail.name %></h4>        
+          </div>
+        </div>
+        <% end %>
+      </div>
+    <% end %>
+  </div>
+</div>

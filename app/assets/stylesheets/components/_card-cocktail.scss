@@ -1,0 +1,10 @@
+.card-cocktail{
+  @extend .card;
+  margin: 16px 0;
+  border-radius: 8px;
+  border: solid 1px rgba(255,255,255,0.5);
+  img {
+    border-radius: 8px;
+    box-shadow: 0 0 15px rgba(255,255,255,0.5);
+  }
+}

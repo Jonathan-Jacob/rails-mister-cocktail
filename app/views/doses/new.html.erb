@@ -1,7 +1,17 @@
-<h1>Add an ingredient to <%= @cocktail.name %></h1>
-<%= simple_form_for [@cocktail, @dose] do |f| %>
-  <%= f.input :description %>
-  <%= f.association :ingredient, collection: Ingredient.all %>
-  <%= f.submit "Submit", class: "btn btn-primary" %>
-<% end %>
+<div class="container-cocktail">
+  <h1>Add an ingredient to <%= @cocktail.name %></h1>
+  <% ingredients = Ingredient.all.sort_by { |i| i.name.upcase } %>
+  <%= simple_form_for [@cocktail, @dose] do |f| %>
+    <%= f.input :description %>
+    <%= f.association :ingredient, collection: ingredients %>
+    <%= f.submit "Submit", class: "btn btn-primary" %>
+  <% end %>
+  <% if @cocktail.errors.any? %>
+  <ul>
+    <% @cocktail.errors.each do |error| %>
+      <li><%= error.full_message %></li>
+    <% end %>
+  </ul>
+  <% end %>
+</div>
 

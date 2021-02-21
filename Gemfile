@@ -50,5 +50,6 @@ gem 'rails-controller-testing', group: [ :test ]
 
 #extra stuff
 gem 'autoprefixer-rails'
+gem 'cloudinary', '~> 1.16.0'
 gem 'font-awesome-sass', '~> 5.12.0'
 gem 'simple_form'
