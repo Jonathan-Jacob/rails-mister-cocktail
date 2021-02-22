@@ -6,8 +6,10 @@
         <%= link_to cocktail_path(cocktail) do %>
         <div class="card-cocktail d-flex">
           <%= cl_image_tag cocktail.photo.key, aspect_ratio: 1.77777777778, crop: :fill %>
-          <div class="card-img-overlay d-flex text-white align-items-end">
-            <h4 class="ml-auto" style="text-shadow: black 0px 0px 8px"><%= cocktail.name %></h4>        
+          <div class="card-img-overlay card-cocktail-overlay">
+            <div class="text-center w-100 h-100 d-flex justify-content-center align-items-end" >
+              <h4 style="text-shadow: black 0px 0px 8px" ><%= cocktail.name %></h4>        
+            </div>
           </div>
         </div>
         <% end %>
