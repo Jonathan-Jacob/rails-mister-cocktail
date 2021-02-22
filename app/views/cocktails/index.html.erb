@@ -1,7 +1,7 @@
 <div class="container-cocktails">
   <h1 class="text-center">Cocktails</h1>
   <div class="row">
-    <% @cocktails.each do |cocktail| %>
+    <% @cocktails.sort_by { |i| i.name.upcase }.each do |cocktail| %>
       <div class="col-6 col-sm-4 col-md-3">
         <%= link_to cocktail_path(cocktail) do %>
         <div class="card-cocktail d-flex">
